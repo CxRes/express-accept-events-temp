@@ -1,0 +1,35 @@
+{
+  "name": "express-accept-events",
+  "version": "0.1.0",
+  "description": "A Connect/Express style middleware for parsing the Accept-Events header",
+  "keywords": [
+    "accept-events",
+    "events",
+    "notifications",
+    "header",
+    "field"
+  ],
+  "author": "Rahul Gupta",
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    "import": "./src/index.js"
+  },
+  "dependencies": {
+    "debug": "^4.3.4",
+    "no-try": "^3.1.0",
+    "structured-field-utils": "1.1.0-nested-sf.0",
+    "structured-headers": "npm:@cxres/structured-headers@2.0.0-alpha.1-nesting.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "globals": "^14.0.0",
+    "prettier": "^3.2.5"
+  },
+  "scripts": {
+    "lint": "eslint . && prettier *.js .*rc src/** --check",
+    "prepublishOnly": "pnpm run lint"
+  }
+}
